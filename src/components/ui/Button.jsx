@@ -1,4 +1,4 @@
-const Button = ({ className = "", icon, label, ...props }) => {
+export const Button = ({ className = "", icon, label, ...props }) => {
   return (
     <button className={`btn btn-active btn-primary ${className}`} {...props}>
       {label}
@@ -6,5 +6,3 @@ const Button = ({ className = "", icon, label, ...props }) => {
     </button>
   );
 };
-
-export default Button;

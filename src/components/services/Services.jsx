@@ -13,13 +13,17 @@ export const Services = () => {
   const { data, isLoading, error } = useQuery(["services"], fetchService);
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p>Error fetching services: {error.message}</p>;
 
   return (
-    <ul>
-      {data.map((services) => (
-        <Card icon={services.icon} label={services.label} />
+    <div>
+      {data.map((service) => (
+        <Card
+          key={service.id} // change to "index" if `id` is not available
+          icon={service.icon}
+          label={service.label}
+        />
       ))}
-    </ul>
+    </div>
   );
 };

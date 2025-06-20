@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 
-import HeroSlider from "./components/ui/HeroSlider";
+import HeroSlider from "../src/components/ui/HeroSlider"
 import Complain from "./components/pages/Complain";
 // import Navbar from "@/components/Navbar";
 

@@ -4,10 +4,15 @@ import ComplaintForm from "../ui/Complainform";
 import ComplaintCard from "../ui/ComplainCard";
 import PasswordPopup from "../ui/PasswordPopup";
 
+import CloneData from "./CloneData";
+
+
 const App = () => {
   const [complaints, setComplaints] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [authRequired, setAuthRequired] = useState(null);
+
+  
 
   // 🔄 Load from localStorage
   useEffect(() => {
@@ -37,6 +42,8 @@ const App = () => {
   };
 
   return (
+    <>
+    
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-red-100 p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-blue-700">Public Complaints</h1>
@@ -72,7 +79,10 @@ const App = () => {
           onClose={() => setAuthRequired(null)}
         />
       )}
+
+      <CloneData/>
     </div>
+    </>
   );
 };
 

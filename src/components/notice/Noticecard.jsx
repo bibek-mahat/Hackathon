@@ -12,7 +12,9 @@ const ReportCard = ({ title, description, status }) => {
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className={`btn ${statusColors[status]}`}>{status}</button>
+          <button className={`btn ${statusColors[status] || "btn-secondary"}`}>
+            {status}
+          </button>
         </div>
       </div>
     </div>

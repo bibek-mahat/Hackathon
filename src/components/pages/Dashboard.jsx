@@ -1,4 +1,4 @@
-import { usePosts } from "../queries/queries";
+import { usePosts } from "../lib/queries/queries";
 
 const Dashboard = () => {
   const { data, isLoading, isError } = usePosts();

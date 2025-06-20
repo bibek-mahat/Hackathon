@@ -1,13 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./app/routes";
+import Navbar from "./components/Navbar";
 // import Navbar from "@/components/Navbar";
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
+    //   <Navbar />
+    //   <AppRoutes />
+    // </BrowserRouter>
+    <>
       <Navbar />
-      <AppRoutes />
-    </BrowserRouter>
+    </>
   );
 }
 

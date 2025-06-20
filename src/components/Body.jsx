@@ -1,12 +1,16 @@
 import Card from "./Card";
 import "./Body.css";
-import CitizenEngagementBanner from "./CitizenEngagementBanner";
+
+// import { Services } from "./services/Services";
 const Body = () => {
   return (
     <>
       <div className="container">
-        <CitizenEngagementBanner />
-        <Card />
+        <div className="flex justify-between">
+          {/* <Services /> */}
+          <Card />
+        </div>
+        
       </div>
     </>
   );
